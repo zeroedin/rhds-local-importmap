@@ -5,195 +5,47 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>RHDS</title>
     <meta name="description" content="RHDS local importmap proof of concept">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
     <script type="importmap">
-    {
-      "imports": {
-        "@rhds/elements/": "/assets/packages/@rhds/elements@2.1.0/elements/",
-        "@patternfly/pfe-core": "/assets/packages/@patternfly/pfe-core@4.0.4/core.js",
-        "@rhds/tokens/": "/assets/packages/@rhds/tokens@2.1.0/",
-        "@rhds/icons/": "/assets/packages/@rhds/icons@1.1.2/"
-      },
-      "scopes": {
-        "/assets/packages/": {
-          "@floating-ui/core": "/assets/packages/@floating-ui/core@1.6.8/dist/floating-ui.core.mjs",
-          "@floating-ui/dom": "/assets/packages/@floating-ui/dom@1.6.11/dist/floating-ui.dom.mjs",
-          "@floating-ui/utils": "/assets/packages/@floating-ui/utils@0.2.8/dist/floating-ui.utils.mjs",
-          "@floating-ui/utils/dom": "/assets/packages/@floating-ui/utils@0.2.8/dist/floating-ui.utils.dom.mjs",
-          "@lit/context": "/assets/packages/@lit/context@1.1.3/development/index.js",
-          "@lit/reactive-element": "/assets/packages/@lit/reactive-element@2.0.4/development/reactive-element.js",
-          "@lit/reactive-element/decorators/": "/assets/packages/@lit/reactive-element@2.0.4/development/decorators/",
-          "@patternfly/pfe-core/": "/assets/packages/@patternfly/pfe-core@4.0.4/",
-          "@patternfly/pfe-core/ssr-shims.js": "/assets/packages/@patternfly/pfe-core@4.0.4/core.js",
-          "@rhds/elements/lib/": "/assets/packages/@rhds/elements@2.1.0/lib/",
+      {
+        "imports": {
           "@rhds/elements/": "/assets/packages/@rhds/elements@2.1.0/elements/",
-          "@rhds/icons/ui/": "/assets/packages/@rhds/icons@1.1.2/ui/",
-          "@rhds/tokens/css/": "/assets/packages/@rhds/tokens@2.1.0/css/",
-          "@rhds/tokens/media.js": "/assets/packages/@rhds/tokens@2.1.0/js/media.js",
-          "lit": "/assets/packages/lit@3.2.1/index.js",
-          "lit-element/lit-element.js": "/assets/packages/lit-element@4.1.1/development/lit-element.js",
-          "lit-html": "/assets/packages/lit-html@3.2.1/development/lit-html.js",
-          "lit-html/": "/assets/packages/lit-html@3.2.1/development/",
-          "lit/": "/assets/packages/lit@3.2.1/",
-          "prism-esm": "/assets/packages/prism-esm@1.29.0-fix.6/prism.js",
-          "prism-esm/components/": "/assets/packages/prism-esm@1.29.0-fix.6/components/",
-          "tslib": "/assets/packages/tslib@2.8.0/tslib.es6.mjs"
+          "@patternfly/pfe-core": "/assets/packages/@patternfly/pfe-core@4.0.4/core.js",
+          "@rhds/tokens/": "/assets/packages/@rhds/tokens@2.1.0/",
+          "@rhds/icons/": "/assets/packages/@rhds/icons@1.1.2/"
+        },
+        "scopes": {
+          "/assets/packages/": {
+            "@floating-ui/core": "/assets/packages/@floating-ui/core@1.6.8/dist/floating-ui.core.mjs",
+            "@floating-ui/dom": "/assets/packages/@floating-ui/dom@1.6.11/dist/floating-ui.dom.mjs",
+            "@floating-ui/utils": "/assets/packages/@floating-ui/utils@0.2.8/dist/floating-ui.utils.mjs",
+            "@floating-ui/utils/dom": "/assets/packages/@floating-ui/utils@0.2.8/dist/floating-ui.utils.dom.mjs",
+            "@lit/context": "/assets/packages/@lit/context@1.1.3/development/index.js",
+            "@lit/reactive-element": "/assets/packages/@lit/reactive-element@2.0.4/development/reactive-element.js",
+            "@lit/reactive-element/decorators/": "/assets/packages/@lit/reactive-element@2.0.4/development/decorators/",
+            "@patternfly/pfe-core/": "/assets/packages/@patternfly/pfe-core@4.0.4/",
+            "@patternfly/pfe-core/ssr-shims.js": "/assets/packages/@patternfly/pfe-core@4.0.4/core.js",
+            "@rhds/elements/lib/": "/assets/packages/@rhds/elements@2.1.0/lib/",
+            "@rhds/elements/": "/assets/packages/@rhds/elements@2.1.0/elements/",
+            "@rhds/icons/ui/": "/assets/packages/@rhds/icons@1.1.2/ui/",
+            "@rhds/tokens/css/": "/assets/packages/@rhds/tokens@2.1.0/css/",
+            "@rhds/tokens/media.js": "/assets/packages/@rhds/tokens@2.1.0/js/media.js",
+            "lit": "/assets/packages/lit@3.2.1/index.js",
+            "lit-element/lit-element.js": "/assets/packages/lit-element@4.1.1/development/lit-element.js",
+            "lit-html": "/assets/packages/lit-html@3.2.1/development/lit-html.js",
+            "lit-html/": "/assets/packages/lit-html@3.2.1/development/",
+            "lit/": "/assets/packages/lit@3.2.1/",
+            "prism-esm": "/assets/packages/prism-esm@1.29.0-fix.6/prism.js",
+            "prism-esm/components/": "/assets/packages/prism-esm@1.29.0-fix.6/components/",
+            "tslib": "/assets/packages/tslib@2.8.0/tslib.es6.mjs"
+          }
         }
       }
-    }
-  </script>
-    <script type="module">
-      import '@rhds/elements/rh-accordion/rh-accordion.js';
-      import '@rhds/elements/rh-card/rh-card.js';
-      import '@rhds/elements/rh-cta/rh-cta.js';
-      import '@rhds/elements/rh-alert/rh-alert.js';
-      import '@rhds/elements/rh-button/rh-button.js';
-      import '@rhds/elements/rh-audio-player/rh-audio-player.js';
-      import '@rhds/elements/rh-avatar/rh-avatar.js';
-      import '@rhds/elements/rh-back-to-top/rh-back-to-top.js';
-      import '@rhds/elements/rh-badge/rh-badge.js';
-      import '@rhds/elements/rh-blockquote/rh-blockquote.js';
-      import '@rhds/elements/rh-code-block/rh-code-block.js';
-      import '@rhds/elements/rh-dialog/rh-dialog.js';
-      import '@rhds/elements/rh-footer/rh-footer.js';
-      import '@rhds/elements/rh-navigation-secondary/rh-navigation-secondary.js';
-      import '@rhds/elements/rh-pagination/rh-pagination.js';
-      import '@rhds/elements/rh-site-status/rh-site-status.js';
-      import '@rhds/elements/rh-skip-link/rh-skip-link.js';
-      import '@rhds/elements/rh-spinner/rh-spinner.js';
-      import '@rhds/elements/rh-stat/rh-stat.js';
-      import '@rhds/elements/rh-subnav/rh-subnav.js';
-      import '@rhds/elements/rh-surface/rh-surface.js';
-      import '@rhds/elements/rh-switch/rh-switch.js';
-      import '@rhds/elements/rh-table/rh-table.js';
-      import '@rhds/elements/rh-tabs/rh-tabs.js';
-      import '@rhds/elements/rh-tag/rh-tag.js';
-      import '@rhds/elements/rh-tile/rh-tile.js';
-      import '@rhds/elements/rh-timestamp/rh-timestamp.js';
-      import '@rhds/elements/rh-tooltip/rh-tooltip.js';
     </script>
+    <script type="module" src="assets/javascripts/imports.js"></script>
 
-    <style>
-      @layer reset, fonts, tokens, base, lightdom, patterns, demo, overrides;
-
-      @import url('https://ux.redhat.com/styles/reset.css') layer(reset);
-      @import url('https://ux.redhat.com/styles/fonts.css') layer(fonts);
-      @import url('/assets/packages/@rhds/tokens@2.1.0/css/global.css') layer(tokens);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-skip-link/rh-skip-link-lightdom-shim.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-navigation-secondary/rh-navigation-secondary-lightdom.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-audio-player/rh-audio-player-lightdom.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-pagination/rh-pagination-lightdom.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-table/rh-table-lightdom.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-tile/rh-tile-lightdom.css') layer(lightdom);
-      @import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-footer/rh-footer-lightdom.css') layer(lightdom);
-
-      @layer base {
-        a {
-          color: var(--rh-color-interactive-blue-darkest);
-          &:is(:hover, :focus) {
-            color: var(--rh-color-interactive-blue-darker);
-          }
-        }
-        [color-palette^="dark"] {
-          a {
-            color: var(--rh-color-interactive-blue-lighter);
-            &:is(:hover, :focus) {
-              color: var(--rh-color-interactive-blue-lightest);
-            }
-          }
-        }
-      }
-
-      @layer demo {
-        body {
-          font-family: var(--rh-font-family-body-text);
-          line-height: var(--rh-line-height-body-text);
-          font-size: 1rem;
-        }
-        
-        .container {
-          padding: 32px;
-          
-          > *:not(:first-child) {
-            margin-block: 32px;
-          }
-        }
-        
-        .psuedo-masthead {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          background: var(--rh-color-surface-darkest);
-          min-height: 72px;
-          position: relative;
-          z-index: 106;
-          
-          svg {
-            margin-block: var(--rh-space-md) 
-          }
-
-          svg,
-          .theme-switch {
-            margin-inline: var(--rh-space-lg);
-          }
-          
-          .theme-switch {
-            display: flex;
-            gap: var(--rh-space-md);
-            height: 100%;
-            place-items: center;
-            justify-content: flex-end;
-            color: var(--rh-color-text-primary-on-dark);
-          }
-          
-          @media (min-width: 768px) {
-            svg,
-            .theme-switch {
-              margin-inline: var(--rh-space-2xl);
-            }
-          }
-          
-          @media (min-width: 1440px) {
-            svg,
-            .theme-switch {
-              margin-inline: var(--rh-space-4xl);
-            }
-          }
-        }
-      }
-
-      @layer patterns {
-        rh-footer .site-status-container {
-          padding: var(--rh-spacer-lg, 16px);
-          background-color: var(--rh-color-surface-darker, #1f1f1f);
-          
-          @media (min-width: 768px) {
-            padding: var(--rh-spacer-2xl, 32px);
-          }
-        
-          @media (min-width: 1368px) {
-            padding-inline: var(--rh-spacer-4xl, 64px);
-          }
-        }
-
-        rh-back-to-top {
-          display: flex;
-          pointer-events: all;
-          position: sticky;
-          justify-content: flex-end;
-          width: 100%;
-          bottom: 0px;
-          margin-block-start: -64px;
-          padding-inline-end: 32px;
-          padding-block-end: 32px;
-          z-index: 5;
-        }
-      }
-
-      @layer overrides {
-        /* none */
-      }      
-    </style>
+    <link rel="stylesheet" href="assets/styles/styles.css">
   </head>
   <body>
     <rh-skip-link>
@@ -203,22 +55,26 @@
     <div class="psuedo-masthead">
       <svg xmlns="http://www.w3.org/2000/svg" width="218" height="46" viewBox="0 0 218 46">
         <g id="Logo" transform="translate(-22 -20)">
-          <rect id="Rectangle_4" data-name="Rectangle 4" width="218" height="46" transform="translate(22 20)" fill="none" />
+          <rect id="Rectangle_4" data-name="Rectangle 4" width="218" height="46" transform="translate(22 20)" fill="none"/>
           <g id="Text" transform="translate(-12 5.38)">
-            <path id="Path_27" data-name="Path 27" d="M1.26,0H6.64a7.088,7.088,0,0,0,7.4-6.98A7.108,7.108,0,0,0,6.64-14H1.26Zm2.9-2.58v-8.84H6.62a4.376,4.376,0,0,1,4.42,4.44,4.354,4.354,0,0,1-4.42,4.4ZM20.94.2a6.262,6.262,0,0,0,4.24-1.5l-1.8-1.64a3.246,3.246,0,0,1-2.3.84,2.96,2.96,0,0,1-2.92-2.18h7.72V-5c0-3.2-2.2-5.6-5.16-5.6a5.331,5.331,0,0,0-5.36,5.4A5.42,5.42,0,0,0,20.94.2ZM18.12-6.24a2.565,2.565,0,0,1,2.54-2.1,2.615,2.615,0,0,1,2.52,2.1ZM31.56.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L35.7-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L26.78-1.24A7.679,7.679,0,0,0,31.56.2Zm7.28-11.86a1.575,1.575,0,0,0,1.56-1.56,1.562,1.562,0,0,0-1.56-1.56,1.562,1.562,0,0,0-1.56,1.56A1.575,1.575,0,0,0,38.84-11.66ZM37.48,0h2.74V-10.42H37.48ZM47.6,4.28c3.34,0,5.16-1.54,5.16-4.3v-10.4h-2.7v.68a5.13,5.13,0,0,0-2.82-.84,5.284,5.284,0,0,0-5.36,5.3A5.263,5.263,0,0,0,47.16.06a4.9,4.9,0,0,0,2.86-.94v.82c0,1.38-.84,2.08-2.48,2.08a7.389,7.389,0,0,1-3.32-.82l-.96,2.12A9.694,9.694,0,0,0,47.6,4.28Zm-.02-6.54a2.963,2.963,0,0,1-3-3.02A2.955,2.955,0,0,1,47.6-8.24a3.47,3.47,0,0,1,2.42.94v4.08A3.3,3.3,0,0,1,47.58-2.26ZM54.92,0h2.74V-7.22A2.546,2.546,0,0,1,59.8-8.26a2.037,2.037,0,0,1,2.16,2.2V0H64.7V-6.46a3.958,3.958,0,0,0-4.12-4.16,4.346,4.346,0,0,0-2.92,1.04v-.84H54.92ZM74.7.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L78.84-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L69.92-1.24A7.679,7.679,0,0,0,74.7.2Zm6.74,4.1c2.26,0,3.52-.94,4.62-3.48l4.8-11.24H87.9l-2.94,7.1-2.6-7.1H79.34L83.4.1l-.16.4a2.123,2.123,0,0,1-2.08,1.42,4.531,4.531,0,0,1-.96-.08V4.2A6.883,6.883,0,0,0,81.44,4.3ZM95.86.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L100-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L91.08-1.24A7.679,7.679,0,0,0,95.86.2ZM106.52.16a8.475,8.475,0,0,0,2.12-.3V-2.4a4.215,4.215,0,0,1-1.46.24c-1.06,0-1.44-.36-1.44-1.34V-8.14h2.98v-2.28h-2.98V-13.7l-2.74.62v2.66h-2.14v2.28H103v5.2C103-.9,104.2.16,106.52.16Zm8.52.04a6.262,6.262,0,0,0,4.24-1.5l-1.8-1.64a3.246,3.246,0,0,1-2.3.84,2.96,2.96,0,0,1-2.92-2.18h7.72V-5c0-3.2-2.2-5.6-5.16-5.6a5.331,5.331,0,0,0-5.36,5.4A5.42,5.42,0,0,0,115.04.2Zm-2.82-6.44a2.565,2.565,0,0,1,2.54-2.1,2.615,2.615,0,0,1,2.52,2.1ZM121.66,0h2.74V-7.3a2.267,2.267,0,0,1,1.94-.96,1.951,1.951,0,0,1,1.96,2.2V0h2.74V-6.46a4.5,4.5,0,0,0-.06-.76,2.371,2.371,0,0,1,2-1.04,1.966,1.966,0,0,1,1.98,2.2V0h2.72V-6.46a3.893,3.893,0,0,0-3.98-4.16,4.315,4.315,0,0,0-3.44,1.56,3.715,3.715,0,0,0-3.14-1.56,3.971,3.971,0,0,0-2.72,1v-.8h-2.74Z" transform="translate(114 56)" fill="#fff" />
-            <path id="Path_26" data-name="Path 26" d="M1.42,0h2.1V-5.74H7.46L10.36,0h2.32L9.56-6.04a3.948,3.948,0,0,0,2.88-3.82c0-2.46-1.88-4.14-4.68-4.14H1.42Zm2.1-7.5v-4.66H7.6c1.64,0,2.74.92,2.74,2.32,0,1.42-1.1,2.34-2.74,2.34ZM18.64.18a6.11,6.11,0,0,0,3.94-1.34L21.3-2.42a3.855,3.855,0,0,1-2.58.9A3.431,3.431,0,0,1,15.3-4.44h8.02V-5a5.065,5.065,0,0,0-4.92-5.36A5.132,5.132,0,0,0,13.3-5.1,5.238,5.238,0,0,0,18.64.18ZM15.32-5.94a3.092,3.092,0,0,1,3.04-2.72,3.133,3.133,0,0,1,2.98,2.72ZM29.92.16A4.645,4.645,0,0,0,33.04-.98V0h1.98V-14.38l-2,.38v4.68a5.072,5.072,0,0,0-3.06-1.02A5.144,5.144,0,0,0,24.78-5.1,5.141,5.141,0,0,0,29.92.16Zm.26-1.74a3.438,3.438,0,0,1-3.44-3.54,3.4,3.4,0,0,1,3.44-3.5A3.75,3.75,0,0,1,33.02-7.4v4.58A3.6,3.6,0,0,1,30.18-1.58ZM41.8,0h2.1V-6.1h7.44V0h2.1V-14h-2.1v6H43.9v-6H41.8ZM59.08.18A4.829,4.829,0,0,0,62.24-.88V0H64.2V-6.76c0-2.32-1.5-3.62-4.16-3.62a9.593,9.593,0,0,0-4.18,1.04l.74,1.5a7.236,7.236,0,0,1,3.16-.86c1.62,0,2.48.74,2.48,2.18v1.08a6.784,6.784,0,0,0-2.78-.58c-2.56,0-4.12,1.18-4.12,3.1C55.34-1.08,56.88.18,59.08.18ZM57.26-2.96c0-1.02.9-1.68,2.36-1.68A5.041,5.041,0,0,1,62.24-4v1.72a3.856,3.856,0,0,1-2.7.96C58.18-1.32,57.26-1.98,57.26-2.96ZM70.56.18a6.72,6.72,0,0,0,1.9-.28V-1.78A3.929,3.929,0,0,1,71-1.54c-1.08,0-1.5-.4-1.5-1.44V-8.5h3v-1.68h-3v-3.08l-1.98.48v2.6H65.36V-8.5h2.16v5.98C67.52-.74,68.58.18,70.56.18Z" transform="translate(114 34)" fill="#fff" />
+            <path id="Path_27" data-name="Path 27" d="M1.26,0H6.64a7.088,7.088,0,0,0,7.4-6.98A7.108,7.108,0,0,0,6.64-14H1.26Zm2.9-2.58v-8.84H6.62a4.376,4.376,0,0,1,4.42,4.44,4.354,4.354,0,0,1-4.42,4.4ZM20.94.2a6.262,6.262,0,0,0,4.24-1.5l-1.8-1.64a3.246,3.246,0,0,1-2.3.84,2.96,2.96,0,0,1-2.92-2.18h7.72V-5c0-3.2-2.2-5.6-5.16-5.6a5.331,5.331,0,0,0-5.36,5.4A5.42,5.42,0,0,0,20.94.2ZM18.12-6.24a2.565,2.565,0,0,1,2.54-2.1,2.615,2.615,0,0,1,2.52,2.1ZM31.56.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L35.7-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L26.78-1.24A7.679,7.679,0,0,0,31.56.2Zm7.28-11.86a1.575,1.575,0,0,0,1.56-1.56,1.562,1.562,0,0,0-1.56-1.56,1.562,1.562,0,0,0-1.56,1.56A1.575,1.575,0,0,0,38.84-11.66ZM37.48,0h2.74V-10.42H37.48ZM47.6,4.28c3.34,0,5.16-1.54,5.16-4.3v-10.4h-2.7v.68a5.13,5.13,0,0,0-2.82-.84,5.284,5.284,0,0,0-5.36,5.3A5.263,5.263,0,0,0,47.16.06a4.9,4.9,0,0,0,2.86-.94v.82c0,1.38-.84,2.08-2.48,2.08a7.389,7.389,0,0,1-3.32-.82l-.96,2.12A9.694,9.694,0,0,0,47.6,4.28Zm-.02-6.54a2.963,2.963,0,0,1-3-3.02A2.955,2.955,0,0,1,47.6-8.24a3.47,3.47,0,0,1,2.42.94v4.08A3.3,3.3,0,0,1,47.58-2.26ZM54.92,0h2.74V-7.22A2.546,2.546,0,0,1,59.8-8.26a2.037,2.037,0,0,1,2.16,2.2V0H64.7V-6.46a3.958,3.958,0,0,0-4.12-4.16,4.346,4.346,0,0,0-2.92,1.04v-.84H54.92ZM74.7.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L78.84-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L69.92-1.24A7.679,7.679,0,0,0,74.7.2Zm6.74,4.1c2.26,0,3.52-.94,4.62-3.48l4.8-11.24H87.9l-2.94,7.1-2.6-7.1H79.34L83.4.1l-.16.4a2.123,2.123,0,0,1-2.08,1.42,4.531,4.531,0,0,1-.96-.08V4.2A6.883,6.883,0,0,0,81.44,4.3ZM95.86.2c2.62,0,4.56-1.46,4.56-3.44,0-1.62-1.14-2.68-3.18-2.98l-2-.3c-1.02-.14-1.42-.42-1.42-1,0-.6.66-1.02,1.64-1.02a6.01,6.01,0,0,1,3.22,1.02L100-9.3a7.687,7.687,0,0,0-4.28-1.3c-2.66,0-4.34,1.3-4.34,3.3,0,1.68,1.1,2.74,3.16,3.04l2,.3c.9.14,1.3.44,1.3.98,0,.68-.8,1.12-2.02,1.12a5.954,5.954,0,0,1-3.38-1.2L91.08-1.24A7.679,7.679,0,0,0,95.86.2ZM106.52.16a8.475,8.475,0,0,0,2.12-.3V-2.4a4.215,4.215,0,0,1-1.46.24c-1.06,0-1.44-.36-1.44-1.34V-8.14h2.98v-2.28h-2.98V-13.7l-2.74.62v2.66h-2.14v2.28H103v5.2C103-.9,104.2.16,106.52.16Zm8.52.04a6.262,6.262,0,0,0,4.24-1.5l-1.8-1.64a3.246,3.246,0,0,1-2.3.84,2.96,2.96,0,0,1-2.92-2.18h7.72V-5c0-3.2-2.2-5.6-5.16-5.6a5.331,5.331,0,0,0-5.36,5.4A5.42,5.42,0,0,0,115.04.2Zm-2.82-6.44a2.565,2.565,0,0,1,2.54-2.1,2.615,2.615,0,0,1,2.52,2.1ZM121.66,0h2.74V-7.3a2.267,2.267,0,0,1,1.94-.96,1.951,1.951,0,0,1,1.96,2.2V0h2.74V-6.46a4.5,4.5,0,0,0-.06-.76,2.371,2.371,0,0,1,2-1.04,1.966,1.966,0,0,1,1.98,2.2V0h2.72V-6.46a3.893,3.893,0,0,0-3.98-4.16,4.315,4.315,0,0,0-3.44,1.56,3.715,3.715,0,0,0-3.14-1.56,3.971,3.971,0,0,0-2.72,1v-.8h-2.74Z" transform="translate(114 56)" fill="#fff"/>
+            <path id="Path_26" data-name="Path 26" d="M1.42,0h2.1V-5.74H7.46L10.36,0h2.32L9.56-6.04a3.948,3.948,0,0,0,2.88-3.82c0-2.46-1.88-4.14-4.68-4.14H1.42Zm2.1-7.5v-4.66H7.6c1.64,0,2.74.92,2.74,2.32,0,1.42-1.1,2.34-2.74,2.34ZM18.64.18a6.11,6.11,0,0,0,3.94-1.34L21.3-2.42a3.855,3.855,0,0,1-2.58.9A3.431,3.431,0,0,1,15.3-4.44h8.02V-5a5.065,5.065,0,0,0-4.92-5.36A5.132,5.132,0,0,0,13.3-5.1,5.238,5.238,0,0,0,18.64.18ZM15.32-5.94a3.092,3.092,0,0,1,3.04-2.72,3.133,3.133,0,0,1,2.98,2.72ZM29.92.16A4.645,4.645,0,0,0,33.04-.98V0h1.98V-14.38l-2,.38v4.68a5.072,5.072,0,0,0-3.06-1.02A5.144,5.144,0,0,0,24.78-5.1,5.141,5.141,0,0,0,29.92.16Zm.26-1.74a3.438,3.438,0,0,1-3.44-3.54,3.4,3.4,0,0,1,3.44-3.5A3.75,3.75,0,0,1,33.02-7.4v4.58A3.6,3.6,0,0,1,30.18-1.58ZM41.8,0h2.1V-6.1h7.44V0h2.1V-14h-2.1v6H43.9v-6H41.8ZM59.08.18A4.829,4.829,0,0,0,62.24-.88V0H64.2V-6.76c0-2.32-1.5-3.62-4.16-3.62a9.593,9.593,0,0,0-4.18,1.04l.74,1.5a7.236,7.236,0,0,1,3.16-.86c1.62,0,2.48.74,2.48,2.18v1.08a6.784,6.784,0,0,0-2.78-.58c-2.56,0-4.12,1.18-4.12,3.1C55.34-1.08,56.88.18,59.08.18ZM57.26-2.96c0-1.02.9-1.68,2.36-1.68A5.041,5.041,0,0,1,62.24-4v1.72a3.856,3.856,0,0,1-2.7.96C58.18-1.32,57.26-1.98,57.26-2.96ZM70.56.18a6.72,6.72,0,0,0,1.9-.28V-1.78A3.929,3.929,0,0,1,71-1.54c-1.08,0-1.5-.4-1.5-1.44V-8.5h3v-1.68h-3v-3.08l-1.98.48v2.6H65.36V-8.5h2.16v5.98C67.52-.74,68.58.18,70.56.18Z" transform="translate(114 34)" fill="#fff"/>
           </g>
-          <rect id="Rectangle" width="1" height="40" transform="translate(86 23)" fill="#fff" />
+          <rect id="Rectangle" width="1" height="40" transform="translate(86 23)" fill="#fff"/>
           <g id="Fedora" transform="translate(21.5 24.5)">
-            <path id="Path" d="M67.65,47.225a4.883,4.883,0,0,1,.075.85c0,3.725-4.525,4.375-7.65,4.375-12.15,0-21.225-7.55-21.225-9.875a1.461,1.461,0,0,1,.05-.475l-.925,2.275A4.586,4.586,0,0,0,37.6,46.2c0,4.525,10.25,11.375,21.925,11.375,5.175,0,9.1-1.95,9.1-5.45A12.6,12.6,0,0,0,68.2,49.6Z" transform="translate(-27.825 -31.2)" />
-            <path id="Path-2" data-name="Path" d="M32.25,21.25c3.125,0,7.65-.65,7.65-4.375a4.882,4.882,0,0,0-.075-.85l-1.85-8.1c-.425-1.775-.8-2.6-3.925-4.15C31.625,2.525,26.35.5,24.775.5c-1.475,0-1.9,1.875-3.625,1.875-1.675,0-2.9-1.4-4.475-1.4C15.175.975,14.2,2,13.45,4.1c0,0-2.1,5.925-2.375,6.8a1.538,1.538,0,0,0-.05.475c-.025,2.3,9.05,9.85,21.225,9.875m8.125-2.85a12.9,12.9,0,0,1,.425,2.525c0,3.5-3.925,5.45-9.1,5.45C20,26.375,9.775,19.525,9.775,15a4.586,4.586,0,0,1,.375-1.825c-4.2.2-9.65.95-9.65,5.75C.5,26.8,19.15,36.5,33.9,36.5c11.325,0,14.175-5.125,14.175-9.175,0-3.175-2.75-6.775-7.7-8.925" fill="#e00" />
+            <path id="Path" d="M67.65,47.225a4.883,4.883,0,0,1,.075.85c0,3.725-4.525,4.375-7.65,4.375-12.15,0-21.225-7.55-21.225-9.875a1.461,1.461,0,0,1,.05-.475l-.925,2.275A4.586,4.586,0,0,0,37.6,46.2c0,4.525,10.25,11.375,21.925,11.375,5.175,0,9.1-1.95,9.1-5.45A12.6,12.6,0,0,0,68.2,49.6Z" transform="translate(-27.825 -31.2)"/>
+            <path id="Path-2" data-name="Path" d="M32.25,21.25c3.125,0,7.65-.65,7.65-4.375a4.882,4.882,0,0,0-.075-.85l-1.85-8.1c-.425-1.775-.8-2.6-3.925-4.15C31.625,2.525,26.35.5,24.775.5c-1.475,0-1.9,1.875-3.625,1.875-1.675,0-2.9-1.4-4.475-1.4C15.175.975,14.2,2,13.45,4.1c0,0-2.1,5.925-2.375,6.8a1.538,1.538,0,0,0-.05.475c-.025,2.3,9.05,9.85,21.225,9.875m8.125-2.85a12.9,12.9,0,0,1,.425,2.525c0,3.5-3.925,5.45-9.1,5.45C20,26.375,9.775,19.525,9.775,15a4.586,4.586,0,0,1,.375-1.825c-4.2.2-9.65.95-9.65,5.75C.5,26.8,19.15,36.5,33.9,36.5c11.325,0,14.175-5.125,14.175-9.175,0-3.175-2.75-6.775-7.7-8.925" fill="#e00"/>
           </g>
         </g>
       </svg>
       <div class="theme-switch">
         <rh-switch id="switch-a" accessible-label="Switch A" checked>
-          <span slot="message-on"><rh-icon set="standard" icon="sun" aria-label="Light" style="color: var(--rh-color-yellow-30); --rh-icon-size: var(--rh-size-icon-03);"></rh-icon></span>
-          <span slot="message-off"><rh-icon set="ui" icon="star-fill" aria-label="Dark" style="color: var(--rh-color-purple-40); --rh-icon-size: var(--rh-size-icon-03);"></rh-icon></span>
+          <span slot="message-on">
+            <rh-icon set="standard" icon="sun" aria-label="Light" style="color: var(--rh-color-yellow-30); --rh-icon-size: var(--rh-size-icon-03);"></rh-icon>
+          </span>
+          <span slot="message-off">
+            <rh-icon set="ui" icon="star-fill" aria-label="Dark" style="color: var(--rh-color-purple-40); --rh-icon-size: var(--rh-size-icon-03);"></rh-icon>
+          </span>
         </rh-switch>
       </div>
     </div>
@@ -236,9 +92,15 @@
               <rh-navigation-secondary-menu-section>
                 <h3 slot="header">Section</h3>
                 <ul slot="links">
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
                 </ul>
                 <rh-cta slot="cta">
                   <a href="#">Section CTA</a>
@@ -247,9 +109,15 @@
               <rh-navigation-secondary-menu-section>
                 <h3 slot="header">Section</h3>
                 <ul slot="links">
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
-                  <li><a href="#">Link</a></li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
                 </ul>
                 <rh-cta slot="cta">
                   <a href="#">Section CTA</a>
@@ -263,18 +131,34 @@
             <a href="#dropdown-fallback-url" slot="link">Dropdown</a>
             <rh-navigation-secondary-menu slot="menu">
               <ul>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
+                <li>
+                  <a href="#">Link</a>
+                </li>
               </ul>
             </rh-navigation-secondary-menu>
           </rh-navigation-secondary-dropdown>
         </li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li>
+          <a href="#">Link</a>
+        </li>
+        <li>
+          <a href="#">Link</a>
+        </li>
       </ul>
       <rh-cta slot="cta">
         <a href="#">Call to Action</a>
@@ -296,17 +180,23 @@
       <a href="#top">Top</a>
 
       <rh-accordion>
-        <h2><rh-accordion-header>Item One</rh-accordion-header></h2>
+        <h2>
+          <rh-accordion-header>Item One</rh-accordion-header>
+        </h2>
         <rh-accordion-panel>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </rh-accordion-panel>
 
-        <h2><rh-accordion-header>Item Two</rh-accordion-header></h2>
+        <h2>
+          <rh-accordion-header>Item Two</rh-accordion-header>
+        </h2>
         <rh-accordion-panel>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </rh-accordion-panel>
 
-        <h2><rh-accordion-header>Item Three</rh-accordion-header></h2>
+        <h2>
+          <rh-accordion-header>Item Three</rh-accordion-header>
+        </h2>
         <rh-accordion-panel>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </rh-accordion-panel>
@@ -352,7 +242,8 @@
           </p>
           <rh-avatar slot="profile" src="https://www.redhat.com/cms/managed-files/ryan-loney.png">
             Ryan Loney
-            <span slot="subtitle">Product manager, OpenVINO Developer Tools, <em>Intel®</em></span>
+            <span slot="subtitle">Product manager, OpenVINO Developer Tools, <em>Intel®</em>
+            </span>
           </rh-avatar>
         </rh-audio-player-about>
         <audio crossorigin="anonymous" slot="media" controls="">
@@ -698,11 +589,10 @@
       <rh-button>Primary</rh-button>
 
       <rh-code-block>
-        <script type="text/text">Error: Error creating network Load Balancer: AccessDenied: User:
-    arn:aws:sts::970xxxxxxxxx:assumed-role/ManagedOpenShift-Installer-Role/163xxxxxxxxxxxxxxxx is
-    not authorized to perform: iam:CreateServiceLinkedRole on resource:
-    arn:aws:iam::970xxxxxxxxx:role/aws-service-role/elasticloadbalancing.amazonaws.com/
-    AWSServiceRoleForElasticLoadBalancing</script>
+        <script type="text/text">
+          Error: Error creating network Load Balancer: AccessDenied: User: arn: aws: sts::970 xxxxxxxxx: assumed - role / ManagedOpenShift - Installer - Role / 163 xxxxxxxxxxxxxxxx is
+          not authorized to perform: iam: CreateServiceLinkedRole on resource: arn: aws: iam::970 xxxxxxxxx: role / aws - service - role / elasticloadbalancing.amazonaws.com / AWSServiceRoleForElasticLoadBalancing
+        </script>
       </rh-code-block>
 
       <rh-button id="first-modal-trigger">Open</rh-button>
@@ -720,11 +610,21 @@
 
       <rh-pagination>
         <ol>
-          <li><a href="#">1</a></li>
-          <li><a href="#2">2</a></li>
-          <li><a href="#3">3</a></li>
-          <li><a href="#4">4</a></li>
-          <li><a href="#5">5</a></li>
+          <li>
+            <a href="#">1</a>
+          </li>
+          <li>
+            <a href="#2">2</a>
+          </li>
+          <li>
+            <a href="#3">3</a>
+          </li>
+          <li>
+            <a href="#4">4</a>
+          </li>
+          <li>
+            <a href="#5">5</a>
+          </li>
         </ol>
       </rh-pagination>
 
@@ -735,7 +635,6 @@
         <span slot="statistic">Statistic Placeholder</span>
         <span>Description Placeholder</span>
       </rh-stat>
-      
 
       <rh-table>
         <table>
@@ -781,7 +680,8 @@
         <rh-tab id="users" slot="tab">Users</rh-tab>
         <rh-tab-panel>Users</rh-tab-panel>
         <rh-tab slot="tab">Containers</rh-tab>
-        <rh-tab-panel>Containers <a href="#">Focusable element</a></rh-tab-panel>
+        <rh-tab-panel>Containers <a href="#">Focusable element</a>
+        </rh-tab-panel>
         <rh-tab slot="tab">Database</rh-tab>
         <rh-tab-panel>Database</rh-tab-panel>
         <rh-tab slot="tab">Servers</rh-tab>
@@ -799,11 +699,13 @@
         <rh-tag color="purple">Purple</rh-tag>
         <rh-tag>Gray</rh-tag>
       </div>
-      
+
       <rh-tile>
         <img slot="image" src="https://fakeimg.pl/296x50" alt="296 X 50 placeholder image">
         <div slot="title">Title</div>
-        <h2 slot="headline"><a href="#top">Link</a></h2>
+        <h2 slot="headline">
+          <a href="#top">Link</a>
+        </h2>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         <div slot="footer">Suspendisse eu turpis elementum</div>
       </rh-tile>
@@ -819,50 +721,102 @@
       </rh-tooltip>
 
       <rh-back-to-top href="#top">Back to top</rh-back-to-top>
-      
+
     </rh-surface>
 
     <rh-footer data-analytics-region="page-footer">
       <a slot="logo" href="https://redhat.com/en" data-analytics-category="Footer" data-analytics-text="Logo">
-        <img alt="Red Hat logo" src="https://static.redhat.com/libs/redhat/brand-assets/2/corp/logo--on-dark.svg" loading="lazy" />
+        <img alt="Red Hat logo" src="https://static.redhat.com/libs/redhat/brand-assets/2/corp/logo--on-dark.svg" loading="lazy"/>
       </a>
-      <rh-footer-social-link slot="social-links" icon="linkedin"><a href="https://www.linkedin.com/company/red-hat" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="LinkedIn">LinkedIn</a></rh-footer-social-link>
-      <rh-footer-social-link slot="social-links" icon="youtube"><a href="https://www.youtube.com/user/RedHatVideos" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="YouTube">YouTube</a></rh-footer-social-link>
-      <rh-footer-social-link slot="social-links" icon="facebook"><a href="https://www.facebook.com/redhatinc" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="Facebook">Facebook</a></rh-footer-social-link>
-      <rh-footer-social-link slot="social-links" icon="x"><a href="https://twitter.com/RedHat" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="Twitter">X/Twitter</a></rh-footer-social-link>
+      <rh-footer-social-link slot="social-links" icon="linkedin">
+        <a href="https://www.linkedin.com/company/red-hat" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="LinkedIn">LinkedIn</a>
+      </rh-footer-social-link>
+      <rh-footer-social-link slot="social-links" icon="youtube">
+        <a href="https://www.youtube.com/user/RedHatVideos" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="YouTube">YouTube</a>
+      </rh-footer-social-link>
+      <rh-footer-social-link slot="social-links" icon="facebook">
+        <a href="https://www.facebook.com/redhatinc" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="Facebook">Facebook</a>
+      </rh-footer-social-link>
+      <rh-footer-social-link slot="social-links" icon="x">
+        <a href="https://twitter.com/RedHat" data-analytics-region="social-links-exit" data-analytics-category="Footer|social-links" data-analytics-text="Twitter">X/Twitter</a>
+      </rh-footer-social-link>
       <h3 slot="links" data-analytics-text="Products">Products</h3>
       <ul slot="links">
-        <li><a href="https://redhat.com/en/technologies/linux-platforms/enterprise-linux" data-analytics-category="Footer|Products" data-analytics-text="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a></li>
-        <li><a href="https://redhat.com/en/technologies/cloud-computing/openshift" data-analytics-category="Footer|Products" data-analytics-text="Red Hat OpenShift">Red Hat OpenShift</a></li>
-        <li><a href="https://redhat.com/en/technologies/management/ansible" data-analytics-category="Footer|Products" data-analytics-text="Red Hat Ansible Automation Platform">Red Hat Ansible Automation Platform</a></li>
-        <li><a href="https://redhat.com/en/technologies/cloud-computing/openshift/cloud-services" data-analytics-category="Footer|Products" data-analytics-text="Cloud services">Cloud services</a></li>
-        <li><a href="https://redhat.com/en/technologies/all-products" data-analytics-category="Footer|Products" data-analytics-text="See all products">See all products</a></li>
+        <li>
+          <a href="https://redhat.com/en/technologies/linux-platforms/enterprise-linux" data-analytics-category="Footer|Products" data-analytics-text="Red Hat Enterprise Linux">Red Hat Enterprise Linux</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/technologies/cloud-computing/openshift" data-analytics-category="Footer|Products" data-analytics-text="Red Hat OpenShift">Red Hat OpenShift</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/technologies/management/ansible" data-analytics-category="Footer|Products" data-analytics-text="Red Hat Ansible Automation Platform">Red Hat Ansible Automation Platform</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/technologies/cloud-computing/openshift/cloud-services" data-analytics-category="Footer|Products" data-analytics-text="Cloud services">Cloud services</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/technologies/all-products" data-analytics-category="Footer|Products" data-analytics-text="See all products">See all products</a>
+        </li>
       </ul>
       <h3 slot="links" data-analytics-text="Tools">Tools</h3>
       <ul slot="links">
-        <li><a href="https://sso.redhat.com" data-analytics-category="Footer|Tools" data-analytics-text="My account">My account</a></li>
-        <li><a href="https://redhat.com/en/services/training-and-certification" data-analytics-category="Footer|Tools" data-analytics-text="Training and certification">Training and certification</a></li>
-        <li><a href="https://access.redhat.com" data-analytics-category="Footer|Tools" data-analytics-text="Customer support">Customer support</a></li>
-        <li><a href="https://developers.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Developer resources">Developer resources</a></li>
-        <li><a href="https://learn.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Learning community">Learning community</a></li>
-        <li><a href="https://connect.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Partner resources">Partner resources</a></li>
-        <li><a href="https://redhat.com/en/resources" data-analytics-category="Footer|Tools" data-analytics-text="Resource library">Resource library</a></li>
+        <li>
+          <a href="https://sso.redhat.com" data-analytics-category="Footer|Tools" data-analytics-text="My account">My account</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/services/training-and-certification" data-analytics-category="Footer|Tools" data-analytics-text="Training and certification">Training and certification</a>
+        </li>
+        <li>
+          <a href="https://access.redhat.com" data-analytics-category="Footer|Tools" data-analytics-text="Customer support">Customer support</a>
+        </li>
+        <li>
+          <a href="https://developers.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Developer resources">Developer resources</a>
+        </li>
+        <li>
+          <a href="https://learn.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Learning community">Learning community</a>
+        </li>
+        <li>
+          <a href="https://connect.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Partner resources">Partner resources</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/resources" data-analytics-category="Footer|Tools" data-analytics-text="Resource library">Resource library</a>
+        </li>
       </ul>
       <h3 slot="links" data-analytics-text="Try buy sell">Try, buy & sell</h3>
       <ul slot="links">
-        <li><a href="https://redhat.com/en/products/trials" data-analytics-category="Footer|Try buy sell" data-analytics-text="Product trial center">Product trial center</a></li>
-        <li><a href="https://marketplace.redhat.com" data-analytics-category="Footer|Try buy sell" data-analytics-text="Red Hat Marketplace">Red Hat Marketplace</a></li>
-        <li><a href="https://catalog.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Red Hat Ecosystem Catalog">Red Hat Ecosystem Catalog</a></li>
-        <li><a href="http://redhat.force.com/finder/" data-analytics-category="Footer|Try buy sell" data-analytics-text="Find a partner">Find a partner</a></li>
-        <li><a href="https://www.redhat.com/en/store" data-analytics-category="Footer|Try buy sell" data-analytics-text="Red Hat Store">Red Hat Store</a></li>
-        <li><a href="https://cloud.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Console">Console</a></li>
+        <li>
+          <a href="https://redhat.com/en/products/trials" data-analytics-category="Footer|Try buy sell" data-analytics-text="Product trial center">Product trial center</a>
+        </li>
+        <li>
+          <a href="https://marketplace.redhat.com" data-analytics-category="Footer|Try buy sell" data-analytics-text="Red Hat Marketplace">Red Hat Marketplace</a>
+        </li>
+        <li>
+          <a href="https://catalog.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Red Hat Ecosystem Catalog">Red Hat Ecosystem Catalog</a>
+        </li>
+        <li>
+          <a href="http://redhat.force.com/finder/" data-analytics-category="Footer|Try buy sell" data-analytics-text="Find a partner">Find a partner</a>
+        </li>
+        <li>
+          <a href="https://www.redhat.com/en/store" data-analytics-category="Footer|Try buy sell" data-analytics-text="Red Hat Store">Red Hat Store</a>
+        </li>
+        <li>
+          <a href="https://cloud.redhat.com/" data-analytics-category="Footer|Tools" data-analytics-text="Console">Console</a>
+        </li>
       </ul>
       <h3 slot="links" data-analytics-text="Communicate">Communicate</h3>
       <ul slot="links">
-        <li><a href="https://redhat.com/en/services/consulting-overview#contact-us" data-analytics-category="Footer|Communicate" data-analytics-text="Contact consulting">Contact consulting</a></li>
-        <li><a href="https://redhat.com/en/contact" data-analytics-category="Footer|Communicate" data-analytics-text="Contact sales">Contact sales</a></li>
-        <li><a href="https://redhat.com/en/services/training-and-certification/contact-us" data-analytics-category="Footer|Communicate" data-analytics-text="Contact training">Contact training</a></li>
-        <li><a href="https://redhat.com/en/about/social" data-analytics-category="Footer|Communicate" data-analytics-text="Social">Social</a></li>
+        <li>
+          <a href="https://redhat.com/en/services/consulting-overview#contact-us" data-analytics-category="Footer|Communicate" data-analytics-text="Contact consulting">Contact consulting</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/contact" data-analytics-category="Footer|Communicate" data-analytics-text="Contact sales">Contact sales</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/services/training-and-certification/contact-us" data-analytics-category="Footer|Communicate" data-analytics-text="Contact training">Contact training</a>
+        </li>
+        <li>
+          <a href="https://redhat.com/en/about/social" data-analytics-category="Footer|Communicate" data-analytics-text="Social">Social</a>
+        </li>
       </ul>
 
       <rh-footer-block slot="main-secondary">
@@ -871,7 +825,9 @@
       </rh-footer-block>
       <rh-footer-block slot="main-secondary">
         <h3 slot="header" data-analytics-text="Subscribe to our newsletter Red Hat Shares">Subscribe to our newsletter, Red Hat Shares</h3>
-        <rh-cta><a href="https://www.redhat.com/en/email-preferences?newsletter=RH-Shares&intcmp=7016000000154xCAAQ" data-analytics-category="Footer|About Red Hat" data-analytics-text="Sign up now">Sign up now</a></rh-cta>
+        <rh-cta>
+          <a href="https://www.redhat.com/en/email-preferences?newsletter=RH-Shares&intcmp=7016000000154xCAAQ" data-analytics-category="Footer|About Red Hat" data-analytics-text="Sign up now">Sign up now</a>
+        </rh-cta>
       </rh-footer-block>
 
       <!-- Site Status-->
@@ -883,23 +839,49 @@
       <rh-footer-universal slot="universal">
         <h3 slot="links-primary" data-analytics-text="Red Hat legal and privacy links" hidden>Red Hat legal and privacy links</h3>
         <ul slot="links-primary" data-analytics-region="page-footer-bottom-primary">
-          <li><a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a></li>
-          <li><a href="https://redhat.com/en/jobs" data-analytics-category="Footer|Corporate" data-analytics-text="Jobs">Jobs</a></li>
-          <li><a href="https://redhat.com/en/events" data-analytics-category="Footer|Corporate" data-analytics-text="Events">Events</a></li>
-          <li><a href="https://redhat.com/en/about/office-locations" data-analytics-category="Footer|Corporate" data-analytics-text="Locations">Locations</a></li>
-          <li><a href="https://redhat.com/en/contact" data-analytics-category="Footer|Corporate" data-analytics-text="Contact Red Hat">Contact Red Hat</a></li>
-          <li><a href="https://redhat.com/en/blog" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Blog">Red Hat Blog</a></li>
-          <li><a href="https://redhat.com/en/about/our-culture/diversity-equity-inclusion" data-analytics-category="Footer|Corporate" data-analytics-text="Diversity equity and inclusion">Diversity, equity, and inclusion</a></li>
-          <li><a href="https://coolstuff.redhat.com/" data-analytics-category="Footer|Corporate" data-analytics-text="Cool Stuff Store">Cool Stuff Store</a></li>
-          <li><a href="https://www.redhat.com/en/summit" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Summit">Red Hat Summit</a></li>
+          <li>
+            <a href="https://redhat.com/en/about/company" data-analytics-category="Footer|Corporate" data-analytics-text="About Red Hat">About Red Hat</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/jobs" data-analytics-category="Footer|Corporate" data-analytics-text="Jobs">Jobs</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/events" data-analytics-category="Footer|Corporate" data-analytics-text="Events">Events</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/about/office-locations" data-analytics-category="Footer|Corporate" data-analytics-text="Locations">Locations</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/contact" data-analytics-category="Footer|Corporate" data-analytics-text="Contact Red Hat">Contact Red Hat</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/blog" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Blog">Red Hat Blog</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/about/our-culture/diversity-equity-inclusion" data-analytics-category="Footer|Corporate" data-analytics-text="Diversity equity and inclusion">Diversity, equity, and inclusion</a>
+          </li>
+          <li>
+            <a href="https://coolstuff.redhat.com/" data-analytics-category="Footer|Corporate" data-analytics-text="Cool Stuff Store">Cool Stuff Store</a>
+          </li>
+          <li>
+            <a href="https://www.redhat.com/en/summit" data-analytics-category="Footer|Corporate" data-analytics-text="Red Hat Summit">Red Hat Summit</a>
+          </li>
         </ul>
         <rh-footer-copyright slot="links-secondary">© 2022 Red Hat, Inc.</rh-footer-copyright>
         <h3 slot="links-secondary" data-analytics-text="Red Hat legal and privacy links" hidden>Red Hat legal and privacy links</h3>
         <ul slot="links-secondary" data-analytics-region="page-footer-bottom-secondary">
-          <li><a href="https://redhat.com/en/about/privacy-policy" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Privacy statement">Privacy statement</a></li>
-          <li><a href="https://redhat.com/en/about/terms-use" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Terms of use">Terms of use</a></li>
-          <li><a href="https://redhat.com/en/about/all-policies-guidelines" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="All policies and guidelines">All policies and guidelines</a></li>
-          <li><a href="https://redhat.com/en/about/digital-accessibility" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Digital accessibility" class="active">Digital accessibility</a></li>
+          <li>
+            <a href="https://redhat.com/en/about/privacy-policy" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Privacy statement">Privacy statement</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/about/terms-use" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Terms of use">Terms of use</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/about/all-policies-guidelines" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="All policies and guidelines">All policies and guidelines</a>
+          </li>
+          <li>
+            <a href="https://redhat.com/en/about/digital-accessibility" data-analytics-category="Footer|Red Hat legal and privacy links" data-analytics-text="Digital accessibility" class="active">Digital accessibility</a>
+          </li>
           <!-- If your website supports trustarc include this item to add Cookie Preferences to your site. -->
           <!-- <li><span id="teconsent"> </span></li> -->
         </ul>
@@ -907,4 +889,3 @@
     </rh-footer>
   </body>
 </html>
-

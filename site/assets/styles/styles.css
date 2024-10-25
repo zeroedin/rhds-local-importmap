@@ -1,0 +1,118 @@
+@layer reset, fonts, tokens, base, lightdom, patterns, demo, overrides;
+
+@import url('https://ux.redhat.com/styles/reset.css') layer(reset);
+@import url('https://ux.redhat.com/styles/fonts.css') layer(fonts);
+@import url('/assets/packages/@rhds/tokens@2.1.0/css/global.css') layer(tokens);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-skip-link/rh-skip-link-lightdom-shim.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-navigation-secondary/rh-navigation-secondary-lightdom.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-audio-player/rh-audio-player-lightdom.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-pagination/rh-pagination-lightdom.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-table/rh-table-lightdom.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-tile/rh-tile-lightdom.css') layer(lightdom);
+@import url('/assets/packages/@rhds/elements@2.1.0/elements/rh-footer/rh-footer-lightdom.css') layer(lightdom);
+
+@layer base {
+  a {
+    color: var(--rh-color-interactive-blue-darkest);
+    &:is(:hover, :focus) {
+      color: var(--rh-color-interactive-blue-darker);
+    }
+  }
+  [color-palette^="dark"] {
+    a {
+      color: var(--rh-color-interactive-blue-lighter);
+      &:is(:hover, :focus) {
+        color: var(--rh-color-interactive-blue-lightest);
+      }
+    }
+  }
+}
+
+@layer demo {
+  body {
+    font-family: var(--rh-font-family-body-text);
+    line-height: var(--rh-line-height-body-text);
+    font-size: 1rem;
+  }
+  
+  .container {
+    padding: 32px;
+    
+    > *:not(:first-child) {
+      margin-block: 32px;
+    }
+  }
+  
+  .psuedo-masthead {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--rh-color-surface-darkest);
+    min-height: 72px;
+    position: relative;
+    z-index: 106;
+    
+    svg {
+      margin-block: var(--rh-space-md) 
+    }
+
+    svg,
+    .theme-switch {
+      margin-inline: var(--rh-space-lg);
+    }
+    
+    .theme-switch {
+      display: flex;
+      gap: var(--rh-space-md);
+      height: 100%;
+      place-items: center;
+      justify-content: flex-end;
+      color: var(--rh-color-text-primary-on-dark);
+    }
+    
+    @media (min-width: 768px) {
+      svg,
+      .theme-switch {
+        margin-inline: var(--rh-space-2xl);
+      }
+    }
+    
+    @media (min-width: 1440px) {
+      svg,
+      .theme-switch {
+        margin-inline: var(--rh-space-4xl);
+      }
+    }
+  }
+}
+
+@layer patterns {
+  rh-footer .site-status-container {
+    padding: var(--rh-spacer-lg, 16px);
+    background-color: var(--rh-color-surface-darker, #1f1f1f);
+    
+    @media (min-width: 768px) {
+      padding: var(--rh-spacer-2xl, 32px);
+    }
+  
+    @media (min-width: 1368px) {
+      padding-inline: var(--rh-spacer-4xl, 64px);
+    }
+  }
+
+  rh-back-to-top {
+    display: flex;
+    pointer-events: all;
+    position: sticky;
+    justify-content: flex-end;
+    width: 100%;
+    bottom: 0px;
+    margin-block-start: -64px;
+    padding-inline-end: 32px;
+    padding-block-end: 32px;
+    z-index: 5;
+  }
+}
+
+@layer overrides {
+  /* none */
+}  
