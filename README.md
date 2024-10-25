@@ -21,7 +21,6 @@ Modify the import map:
       "imports": {
         "@cpelements/elements/": "/assets/packages/@cpelements/elements@2.0.0-alpha.46/elements/",
         "@rhds/elements/": "/assets/packages/@rhds/elements@2.1.0/elements/",
-        "@rhds/elements/lib/": "/assets/packages/@rhds/elements@2.1.0/lib/",
         "@patternfly/elements/": "/assets/packages/@patternfly/elements@4.0.2/",
         "@patternfly/pfe-core": "/assets/packages/@patternfly/pfe-core@4.0.4/core.js",
         "@rhds/tokens/": "/assets/packages/@rhds/tokens@2.1.0/",
